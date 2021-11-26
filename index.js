@@ -34,16 +34,6 @@ thumbContainers.forEach((thumb) => {
     })
 })
 
-
-// playButtons.forEach((button) => {
-//   button.addEventListener("click", (e) => {
-//     console.log("play clicked", e.currentTarget.parentNode.querySelector('.portfolio-thumb').classList.toggle("thumb-hidden"));
-//       e.currentTarget.parentNode.querySelector('iframe').classList.toggle("video-hidden");
-//       // e.currentTarget.parentNode.querySelector('.portfolio-thumb').classList.toggle("thumb-hidden");
-//
-//   });
-// });
-
 swipeContainer.addEventListener("click", () => {
     location.hash = "portfolio";
 });
