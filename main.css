@@ -34,7 +34,27 @@ html {
 
 body {
     background: #fff;
+    background: url(./assets/background-image-phone.png) repeat-y fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100vw;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: url(./assets/background-image-phone.png) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .wrapper {
@@ -44,14 +64,6 @@ body {
     min-height: 300vh;
     margin: 0;
     padding: 0;
-
-}
-
-.background-img {
-    background: url(./assets/background-image-phone.png) repeat-y fixed center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    min-height: 100vh;
 }
 
 .main-container {
@@ -111,7 +123,6 @@ body {
     color: #ffffff;
 }
 
-
 .nav-hamburger {
     display: block;
     cursor: pointer;
@@ -155,7 +166,6 @@ body {
 .nav-hamburger.expanded .nav-line {
     background: transparent;
 }
-
 
 .nav-hamburger.expanded .nav-line::after,
 .nav-hamburger.expanded .nav-line::before {
@@ -216,19 +226,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: auto;
-    margin-bottom: 2vh;
-    background: linear-gradient(
-            to right,
-            #dad9d9 0,
-            rgb(255, 255, 255) 20%,
-            #bebebe 30%
-    ) -20px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 200px;
-    cursor: pointer;
-    animation: glow 4s ease-in infinite;
+    margin-bottom: 5%;
 }
 
 @keyframes glow {
@@ -253,6 +251,17 @@ body {
     font-size: 20px;
     text-align: center;
     letter-spacing: 0.05em;
+
+    background: linear-gradient(to right,
+    #dad9d9 0,
+    rgb(255, 255, 255) 20%,
+    #bebebe 30%) -20px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 200px;
+    cursor: pointer;
+    animation: glow 4s ease-in infinite;
 }
 
 .home-swipe-arrow {
@@ -260,8 +269,10 @@ body {
 }
 
 .portfolio {
-    /*background: rgba(0, 0, 0, 0.6);*/
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 65%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.7) 65%,
+    rgba(0, 0, 0, 0) 100%);
     min-height: 100vh;
     width: 100%;
     padding-top: 54px;
@@ -278,7 +289,6 @@ body {
 }
 
 .portfolio-item {
-    /* margin-top: 59px; */
     position: relative;
 }
 
@@ -303,7 +313,6 @@ body {
 }
 
 .portfolio-item .portfolio-thumb {
-    /*display: block;*/
     height: 183px;
     width: 294px;
     border-radius: 10px;
@@ -313,7 +322,6 @@ body {
 }
 
 .portfolio-item iframe {
-    /*display: block;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -353,7 +361,10 @@ body {
 .contacts {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.65) 10%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.65) 10%,
+    rgba(0, 0, 0, 0) 100%);
     min-height: 100vh;
     width: 100%;
     justify-content: center;
@@ -432,11 +443,15 @@ body {
     cursor: pointer;
 }
 
-@media (min-width: 375px) {
-    .background-img {
+@media (min-width: 576px) {
+    body {
         background: url(./assets/background-image-big.png) no-repeat fixed center;
         background-size: cover;
         min-height: 100vh;
+    }
+
+    body::after {
+        background: none;
     }
 }
 

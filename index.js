@@ -25,14 +25,14 @@ allLinksArray.forEach((link) => {
     });
 });
 
-const thumbContainers = document.querySelectorAll('.portfolio-thumb-container');
+const thumbContainers = document.querySelectorAll(".portfolio-thumb-container");
 thumbContainers.forEach((thumb) => {
-    thumb.addEventListener('click', (e) => {
+    thumb.addEventListener("click", (e) => {
         e.currentTarget.style.opacity = "0";
-        e.currentTarget.parentNode.querySelector('iframe').style.opacity = "1";
-        e.currentTarget.parentNode.querySelector('iframe').style.zIndex = "1";
-    })
-})
+        e.currentTarget.parentNode.querySelector("iframe").style.opacity = "1";
+        e.currentTarget.parentNode.querySelector("iframe").style.zIndex = "1";
+    });
+});
 
 swipeContainer.addEventListener("click", () => {
     location.hash = "portfolio";
