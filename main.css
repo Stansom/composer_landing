@@ -33,6 +33,7 @@ html {
 }
 
 body {
+    background: #fff;
     width: 100vw;
 }
 
@@ -49,8 +50,8 @@ body {
 .background-img {
     background: url(./assets/background-image-phone.png) repeat-y fixed center;
     background-size: cover;
+    -webkit-background-size: cover;
     min-height: 100vh;
-    max-height: 100%;
 }
 
 .main-container {
