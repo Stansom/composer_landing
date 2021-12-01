@@ -1,4 +1,3 @@
-#Landing Page (composer)
 The landing page for my own music composers project
 
 https://stansom.github.io/composer_landing/
